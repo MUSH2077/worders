@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 22
+card_name = "Wild Bloom"
+card_type = 0
+rarity = 1
+pos_constraint = 0
+comp_constraint = 2
+content_constraint = 4
+base_disorder = 28.0
+mana_cost = 1
+description = "Object attack card with nature words."

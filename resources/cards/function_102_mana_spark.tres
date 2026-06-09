@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 102
+card_name = "Mana Spark"
+card_type = 1
+rarity = 1
+pos_constraint = 7
+comp_constraint = 6
+content_constraint = 7
+base_disorder = 0.0
+mana_cost = 1
+effect = 4
+effect_value = 1
+description = "Recover one mana."

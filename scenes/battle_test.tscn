@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://68528dmgxp6e"]
+
+[node name="Test" type="Control" unique_id=1609326371]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="ColorRect" parent="." unique_id=738753854]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1, 0.08, 0.16, 1)
+
+[node name="TopBar" type="ColorRect" parent="." unique_id=839139138]
+layout_mode = 0
+offset_left = 50.0
+color = Color(0.8, 0.3, 0.2, 1)
+
+[node name="BottomBar" type="ColorRect" parent="." unique_id=1199764787]
+layout_mode = 0
+offset_left = 50.0
+color = Color(0.2, 0.3, 0.8, 1)
+
+[node name="TestLabel" type="Label" parent="." unique_id=1329867443]
+layout_mode = 0
+offset_left = 500.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "如果看到这行字，布局系统正常"
+horizontal_alignment = 1

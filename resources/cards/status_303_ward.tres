@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 303
+card_name = "Ward"
+card_type = 3
+rarity = 1
+pos_constraint = 7
+comp_constraint = 0
+content_constraint = 9
+base_disorder = 0.0
+mana_cost = 1
+effect = 2
+effect_value = 3
+duration_turns = 1
+description = "Gain three shield."

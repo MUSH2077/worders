@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dyoi4wdml1fqc"]
+
+[node name="MenuClone" type="Control" unique_id=1231281542]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1730923834]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.08, 0.06, 0.16, 1)
+
+[node name="TopArea" type="ColorRect" parent="." unique_id=1739034725]
+layout_mode = 0
+offset_left = 12.0
+color = Color(0.15, 0.1, 0.08, 1)
+
+[node name="MidArea" type="ColorRect" parent="." unique_id=1213058801]
+layout_mode = 0
+offset_left = 12.0
+color = Color(0.08, 0.06, 0.14, 1)
+
+[node name="TestLabel" type="Label" parent="." unique_id=631270589]
+layout_mode = 0
+offset_left = 560.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 28
+text = "这是战斗布局测试"
+horizontal_alignment = 1

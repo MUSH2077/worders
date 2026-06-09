@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 205
+card_name = "Verdant Seal"
+card_type = 2
+rarity = 2
+pos_constraint = 7
+comp_constraint = 3
+content_constraint = 4
+base_disorder = 0.0
+mana_cost = 3
+effect = 3
+effect_value = 6
+description = "Heal six HP."

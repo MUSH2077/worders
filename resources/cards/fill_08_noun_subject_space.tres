@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 8
+card_name = "空间"
+card_type = 0
+rarity = 1
+pos_constraint = 0
+comp_constraint = 0
+content_constraint = 9
+base_disorder = 28.0
+description = "名词/主语/空间"

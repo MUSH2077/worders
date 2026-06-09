@@ -1,0 +1,120 @@
+<h2>卡牌文字对战 - 游戏流程</h2>
+<p class="subtitle">这是我根据你的描述整理的流程图，请确认理解是否正确</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">对局流程</div>
+    <div class="mockup-body" style="padding: 24px; font-size: 14px; line-height: 2;">
+      <div style="display: flex; flex-direction: column; gap: 8px; max-width: 600px; margin: 0 auto;">
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</span>
+          <span><b>抽牌阶段</b> — 双方各抽取一组手牌（N张）</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</span>
+          <span><b>选牌</b> — 玩家从手牌中选择要打出的牌，按顺序排列</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</span>
+          <span><b>填词</b> — 根据每张牌的约束（词性 + 句子成分 + 扩展内容），输入词语</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</span>
+          <span><b>出牌 &amp; 造句</b> — 所有填好的词按顺序组成句子</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</span>
+          <span><b>评分系统</b> — 评估句子的"紊乱度"，生成攻击/防御/治疗数值</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">6</span>
+          <span><b>结算伤害</b> — 双方互相对对方造成伤害/治疗/防御</span>
+        </div>
+
+        <div style="text-align: center; color: var(--muted);">&#8595;</div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">7</span>
+          <span><b>回合结束</b> — 进入下一轮，重复直到一方HP归零</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>核心概念：每张牌 = 一个"填空格"</h3>
+  <div class="mockup">
+    <div class="mockup-body" style="padding: 20px;">
+      <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+        <div style="border: 2px solid var(--border); border-radius: 12px; padding: 16px 20px; width: 200px; text-align: center;">
+          <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">卡牌A</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">词性: 形容词</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">成分: 定语</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:12px;">扩展: 颜色类</div>
+          <div style="border: 1px dashed var(--accent); border-radius: 6px; padding: 8px 12px; background: var(--bg-secondary);">
+            <span style="color: var(--muted);">输入: </span><span style="color: var(--accent);">___</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; font-size: 24px; color: var(--muted);">+</div>
+        <div style="border: 2px solid var(--border); border-radius: 12px; padding: 16px 20px; width: 200px; text-align: center;">
+          <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">卡牌B</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">词性: 名词</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">成分: 主语</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:12px;">扩展: 动物类</div>
+          <div style="border: 1px dashed var(--accent); border-radius: 6px; padding: 8px 12px; background: var(--bg-secondary);">
+            <span style="color: var(--muted);">输入: </span><span style="color: var(--accent);">___</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; font-size: 24px; color: var(--muted);">+</div>
+        <div style="border: 2px solid var(--border); border-radius: 12px; padding: 16px 20px; width: 200px; text-align: center;">
+          <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">卡牌C</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">词性: 动词</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:4px;">成分: 谓语</div>
+          <div style="font-size: 13px; color: var(--muted); margin-bottom:12px;">扩展: 动作类</div>
+          <div style="border: 1px dashed var(--accent); border-radius: 6px; padding: 8px 12px; background: var(--bg-secondary);">
+            <span style="color: var(--muted);">输入: </span><span style="color: var(--accent);">___</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; font-size: 24px; color: var(--muted);">=</div>
+        <div style="border: 2px solid #4ade80; border-radius: 12px; padding: 16px 20px; width: 220px; text-align: center; background: rgba(74,222,128,0.08);">
+          <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">造句结果</div>
+          <div style="font-size: 18px; color: #4ade80; margin-bottom: 12px;">"绯红的 狐狸 跳跃"</div>
+          <div style="font-size: 13px;">紊乱度: <b style="color: #fbbf24;">65%</b></div>
+          <div style="font-size: 13px;">→ ATK:6 / DEF:2 / HEAL:1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>待确认的关键问题</h3>
+  <div style="display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto;">
+    <div style="padding: 12px 16px; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--accent);">
+      <span style="font-weight: bold;">Q1:</span> 是"双方各造一个句子"还是"双方轮流出一张牌共同造一个句子"？
+    </div>
+    <div style="padding: 12px 16px; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--accent);">
+      <span style="font-weight: bold;">Q2:</span> 抽牌是一次性抽完还是每回合补充？
+    </div>
+    <div style="padding: 12px 16px; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--accent);">
+      <span style="font-weight: bold;">Q3:</span> 双方同时出牌结算还是轮流进行？
+    </div>
+  </div>
+</div>

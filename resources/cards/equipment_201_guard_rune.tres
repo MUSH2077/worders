@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 201
+card_name = "Guard Rune"
+card_type = 2
+rarity = 1
+pos_constraint = 7
+comp_constraint = 0
+content_constraint = 6
+base_disorder = 0.0
+mana_cost = 2
+effect = 2
+effect_value = 6
+description = "Gain six shield."

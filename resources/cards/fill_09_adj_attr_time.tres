@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 9
+card_name = "时光"
+card_type = 0
+rarity = 1
+pos_constraint = 2
+comp_constraint = 3
+content_constraint = 8
+base_disorder = 28.0
+description = "形容词/定语/时间"

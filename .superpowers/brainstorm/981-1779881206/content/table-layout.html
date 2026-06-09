@@ -1,0 +1,99 @@
+<h2>牌桌布局方案对比</h2>
+<p class="subtitle">深色=牌桌底色，拖拽出牌→造句槽→出招</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>传统对弈式（上下对称）</h3>
+      <p>己方区在下，对手区在上，中间是双方造句区。经典卡牌游戏布局。</p>
+      <div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:10px;font-size:11px;line-height:1.6;">
+        ┌─ AI对手 ❤30 🛡0 ──────────┐<br/>
+        │  AI手牌: 🂠🂠🂠🂠          │<br/>
+        ├─ 对手造句: [___][___][___] ─┤<br/>
+        │        ⚔️ 牌桌 ⚔️         │<br/>
+        ├─ 你的造句: [___][___][___] ─┤<br/>
+        │  你的手牌: 🂠🂠🂠🂠         │<br/>
+        └─ 你 ❤30 🛡0 ⚡1 ──────────┘<br/>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>牌桌沉浸式（左中右三栏）⭐推荐</h3>
+      <p>左右两侧状态栏+头像，中间大面积牌桌区域放手牌和造句槽。</p>
+      <div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:10px;font-size:11px;line-height:1.6;">
+        ┌─左─┐ ┌────── 中央牌桌 ──────┐ ┌─右─┐<br/>
+        │AI   │ │ 对手造句: [__][__][__] │ │你  │<br/>
+        │头像  │ │                      │ │头像 │<br/>
+        │❤30  │ │   你的造句区           │ │❤30 │<br/>
+        │🛡0   │ │   [定:___][主:___]    │ │🛡0  │<br/>
+        │⚡10  │ │                      │ │⚡1  │<br/>
+        │🎴15  │ │ 🂠🂠🂠🂠 (你的手牌)    │ │🎴14 │<br/>
+        └────┘ └──────────────────────┘ └────┘<br/>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>聚焦式（手牌区放大+悬浮HUD）</h3>
+      <p>手牌占主体面积，状态栏悬浮边角，适合小屏幕。</p>
+      <div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:10px;font-size:11px;line-height:1.6;">
+        [AI ❤30]─────────────┐<br/>
+        │  造句: [___][___]  │<br/>
+        │                    │<br/>
+        │ 🂠 🂠 🂠 🂠        │ ← 大手牌区<br/>
+        │                    │<br/>
+        └─────────────[你 ❤30]<br/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>状态栏信息设计（适用于所有方案）</h3>
+  <div class="mockup">
+    <div class="mockup-body" style="padding:16px;">
+      <div style="display:flex; gap:16px; justify-content:center;">
+        <div style="border:2px solid #f87171; border-radius:8px; padding:12px 20px; background:rgba(248,113,113,0.08); text-align:center; min-width:140px;">
+          <div style="font-weight:bold; font-size:14px;">AI对手</div>
+          <div style="font-size:20px; margin:4px 0;">头像</div>
+          <div style="font-size:12px;">❤️ 30/30</div>
+          <div style="font-size:12px;">🛡️ 0</div>
+          <div style="font-size:12px;">⚡ 10/10</div>
+          <div style="font-size:12px;">🎴 15</div>
+        </div>
+        <div style="border:2px solid #60a5fa; border-radius:8px; padding:12px 20px; background:rgba(96,165,250,0.08); text-align:center; min-width:140px;">
+          <div style="font-weight:bold; font-size:14px;">玩家</div>
+          <div style="font-size:20px; margin:4px 0;">头像</div>
+          <div style="font-size:12px;">❤️ 30/30</div>
+          <div style="font-size:12px;">🛡️ 0</div>
+          <div style="font-size:12px;">⚡ 1/10</div>
+          <div style="font-size:12px;">🎴 14</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>美化路线图（分阶段）</h3>
+  <div style="max-width:600px;margin:0 auto;font-size:13px;">
+    <div style="padding:8px 12px; background:rgba(96,165,250,0.1); border-radius:6px; margin-bottom:8px;">
+      <b>Phase 1 - 基础可用：</b> StyleBoxFlat 面板 + 基础配色（当前已完成）
+    </div>
+    <div style="padding:8px 12px; background:rgba(96,165,250,0.1); border-radius:6px; margin-bottom:8px;">
+      <b>Phase 2 - 牌桌成型：</b> 方案B三栏布局 + 桌布纹理 + 头像占位 + 状态栏图标
+    </div>
+    <div style="padding:8px 12px; background:rgba(96,165,250,0.1); border-radius:6px; margin-bottom:8px;">
+      <b>Phase 3 - 视觉打磨：</b> 卡牌动画（拖拽/打出/翻转）+ 粒子特效 + 音效
+    </div>
+    <div style="padding:8px 12px; background:rgba(96,165,250,0.1); border-radius:6px;">
+      <b>Phase 4 - 完整美术：</b> 定制卡牌原画 + 专属桌布 + 角色立绘 + UI动效
+    </div>
+  </div>
+</div>

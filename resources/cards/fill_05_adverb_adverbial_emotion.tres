@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 5
+card_name = "情态"
+card_type = 0
+rarity = 1
+pos_constraint = 3
+comp_constraint = 4
+content_constraint = 2
+base_disorder = 30.0
+description = "副词/状语/情感"

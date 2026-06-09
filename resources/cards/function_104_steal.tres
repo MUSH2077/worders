@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 104
+card_name = "Plunder"
+card_type = 1
+rarity = 2
+pos_constraint = 7
+comp_constraint = 6
+content_constraint = 10
+base_disorder = 5.0
+mana_cost = 2
+effect = 7
+effect_value = 1
+description = "Steal one random card from opponent's hand."

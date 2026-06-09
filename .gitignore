@@ -1,0 +1,6 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Exported builds (GitHub 100 MB file limit)
+*.exe
+worders.exe

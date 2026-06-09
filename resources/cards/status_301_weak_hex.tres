@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 301
+card_name = "Weak Hex"
+card_type = 3
+rarity = 1
+pos_constraint = 7
+comp_constraint = 1
+content_constraint = 2
+base_disorder = 0.0
+mana_cost = 2
+effect = 5
+effect_value = 4
+duration_turns = 1
+description = "Deal three direct damage."

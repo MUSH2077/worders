@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = 4
+card_name = "万用"
+card_type = 0
+rarity = 1
+pos_constraint = 7
+comp_constraint = 6
+content_constraint = 10
+base_disorder = 14.0
+description = "无约束万能牌"

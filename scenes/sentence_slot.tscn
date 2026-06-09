@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/sentence_slot_ui.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="2"]
+bg_color = Color(0.09, 0.12, 0.16, 0.9)
+border_width_left = 2
+border_width_right = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.57, 0.24, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+corner_radius_bottom_right = 8
+
+[node name="SentenceSlot" type="Panel"]
+custom_minimum_size = Vector2(120, 80)
+script = ExtResource("1")
+mouse_filter = 0
+theme_override_styles/panel = SubResource("2")
+
+[node name="CompLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 32.0
+text = "主语"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.95, 0.78, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="WordLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 36.0
+offset_bottom = 64.0
+text = "___"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.9, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 16

@@ -1,0 +1,222 @@
+<h2>战斗维度设计 — 三种方案</h2>
+<p class="subtitle">每种方案都天然和"填词造句"玩法绑定，形成策略深度</p>
+
+<div class="section">
+  <h3>方案A：句子分段映射</h3>
+  <p class="subtitle">不同句子成分贡献不同战斗效果</p>
+
+  <div class="mockup">
+    <div class="mockup-body" style="padding: 20px;">
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: flex-end;">
+
+        <div style="border:2px solid #60a5fa; border-radius:10px; padding:14px; width:140px; text-align:center;">
+          <div style="font-weight:bold; color:#60a5fa; font-size:14px;">主语槽</div>
+          <div style="font-size:11px; color:var(--muted);">词性: 名词</div>
+          <div style="font-size:11px; color:var(--muted);">扩展: 生物类</div>
+          <div style="margin-top:8px; padding:6px 10px; background:rgba(96,165,250,0.15); border-radius:6px;">
+            <span style="color:var(--accent);">"龙"</span>
+          </div>
+          <div style="margin-top:8px; font-weight:bold; color:#60a5fa; font-size:13px;">→ 防御值</div>
+        </div>
+
+        <div style="font-size:20px; color:var(--muted);">+</div>
+
+        <div style="border:2px solid #f87171; border-radius:10px; padding:14px; width:140px; text-align:center;">
+          <div style="font-weight:bold; color:#f87171; font-size:14px;">谓语槽</div>
+          <div style="font-size:11px; color:var(--muted);">词性: 动词</div>
+          <div style="font-size:11px; color:var(--muted);">扩展: 破坏类</div>
+          <div style="margin-top:8px; padding:6px 10px; background:rgba(248,113,113,0.15); border-radius:6px;">
+            <span style="color:var(--accent);">"撕裂"</span>
+          </div>
+          <div style="margin-top:8px; font-weight:bold; color:#f87171; font-size:13px;">→ 攻击值</div>
+        </div>
+
+        <div style="font-size:20px; color:var(--muted);">+</div>
+
+        <div style="border:2px solid #fbbf24; border-radius:10px; padding:14px; width:140px; text-align:center;">
+          <div style="font-weight:bold; color:#fbbf24; font-size:14px;">定语槽</div>
+          <div style="font-size:11px; color:var(--muted);">词性: 形容词</div>
+          <div style="font-size:11px; color:var(--muted);">扩展: 颜色类</div>
+          <div style="margin-top:8px; padding:6px 10px; background:rgba(251,191,36,0.15); border-radius:6px;">
+            <span style="color:var(--accent);">"深红的"</span>
+          </div>
+          <div style="margin-top:8px; font-weight:bold; color:#fbbf24; font-size:13px;">→ 暴击倍率</div>
+        </div>
+
+        <div style="font-size:20px; color:var(--muted);">→</div>
+
+        <div style="border:2px solid #4ade80; border-radius:10px; padding:14px; width:170px; text-align:center; background:rgba(74,222,128,0.08);">
+          <div style="font-size:16px; font-weight:bold; margin-bottom:6px;">"深红的龙撕裂"</div>
+          <div style="font-size:12px;">ATK: 8 / DEF: 5</div>
+          <div style="font-size:12px;">暴击: x1.8</div>
+          <div style="font-size:12px; margin-top:4px; color:#fbbf24;">最终伤害: 14</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; display: flex; justify-content: center; font-size:13px;">
+        <div class="pros-cons" style="max-width:600px;">
+          <div class="pros"><h4>优点</h4><ul>
+            <li>填词选择直接影响战斗效果，策略感强</li>
+            <li>不同成分=不同战斗维度，天然平衡</li>
+            <li>直观："主语多=肉，谓语多=输出"</li>
+          </ul></div>
+          <div class="cons"><h4>缺点</h4><ul>
+            <li>评分系统退居次要，核心变成"选什么词"而非"造什么句"</li>
+            <li>战斗维度固定（成分种类有限），扩展性受限</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>方案B：节奏/连击系统</h3>
+  <p class="subtitle">句子结构特征决定伤害模式，评分决定基础伤害值</p>
+
+  <div class="mockup">
+    <div class="mockup-body" style="padding: 20px;">
+
+      <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+
+        <div style="border:2px solid var(--border); border-radius:10px; padding:16px; width:280px;">
+          <div style="font-weight:bold; margin-bottom:8px;">短句策略</div>
+          <div style="font-size:18px; text-align:center; margin:12px 0;">"龙 咆哮"</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center; margin:8px 0;">
+            <span style="background:#60a5fa; color:#fff; border-radius:4px; padding:2px 6px; font-size:12px;">主</span>
+            <span style="background:#f87171; color:#fff; border-radius:4px; padding:2px 6px; font-size:12px;">谓</span>
+          </div>
+          <div style="font-size:13px; margin-top:12px; line-height:1.8;">
+            <div>连击数: <b>2</b></div>
+            <div>紊乱度基础分: <b>40</b></div>
+            <div style="color:#fbbf24;">总伤害 = 40 x 1.0 = <b>40</b></div>
+          </div>
+          <div style="font-size:12px; color:var(--muted); margin-top:8px;">低风险，稳定输出</div>
+        </div>
+
+        <div style="border:2px solid var(--accent); border-radius:10px; padding:16px; width:280px; background:rgba(96,165,250,0.05);">
+          <div style="font-weight:bold; margin-bottom:8px;">长句策略</div>
+          <div style="font-size:18px; text-align:center; margin:12px 0;">"深红的 远古 巨龙 愤怒地 咆哮"</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center; margin:8px 0;">
+            <span style="background:#fbbf24; color:#000; border-radius:4px; padding:2px 6px; font-size:12px;">定</span>
+            <span style="background:#fbbf24; color:#000; border-radius:4px; padding:2px 6px; font-size:12px;">定</span>
+            <span style="background:#60a5fa; color:#fff; border-radius:4px; padding:2px 6px; font-size:12px;">主</span>
+            <span style="background:#a78bfa; color:#fff; border-radius:4px; padding:2px 6px; font-size:12px;">状</span>
+            <span style="background:#f87171; color:#fff; border-radius:4px; padding:2px 6px; font-size:12px;">谓</span>
+          </div>
+          <div style="font-size:13px; margin-top:12px; line-height:1.8;">
+            <div>连击数: <b>5</b> (+x0.2 each)</div>
+            <div>紊乱度基础分: <b>75</b></div>
+            <div style="color:#fbbf24;">总伤害 = 75 x 1.6 = <b>120</b></div>
+          </div>
+          <div style="font-size:12px; color:var(--muted); margin-top:8px;">高风险（词多易不搭），高回报</div>
+        </div>
+
+      </div>
+
+      <div class="mockup">
+        <div class="mockup-header">伤害公式</div>
+        <div class="mockup-body" style="padding:16px; font-family:monospace; font-size:14px; text-align:center;">
+          <div style="margin-bottom:8px;">总伤害 = <b>紊乱度</b> x <b>连击倍率</b> x <b>修辞加成</b> - <b>违规惩罚</b></div>
+          <div style="display:flex; gap:16px; justify-content:center; margin-top:12px; font-size:12px; flex-wrap:wrap;">
+            <div>连击倍率 = 1.0 + (句子长度-2) x 0.2</div>
+            <div>修辞加成 = 排比x1.3 / 对仗x1.5</div>
+            <div>违规惩罚 = 成分缺失/重复扣分</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; display: flex; justify-content: center; font-size:13px;">
+        <div class="pros-cons" style="max-width:600px;">
+          <div class="pros"><h4>优点</h4><ul>
+            <li>句子"结构之美"→战斗力，核心循环闭环</li>
+            <li>策略维度丰富：长句vs短句、求稳vs求修辞</li>
+            <li>公式可预测，玩家可精确计算</li>
+          </ul></div>
+          <div class="cons"><h4>缺点</h4><ul>
+            <li>没有独立防御/治疗，战斗层次可能单一</li>
+            <li>修辞检测（排比/对仗）需额外规则引擎</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>方案C：双轨对冲制</h3>
+  <p class="subtitle">攻击力和防御力来自两个相互制约的评分维度，引入自然博弈</p>
+
+  <div class="mockup">
+    <div class="mockup-body" style="padding: 20px;">
+
+      <div style="display:flex; gap:20px; justify-content:center; margin-bottom:20px; flex-wrap:wrap;">
+        <div style="text-align:center; width:200px;">
+          <div style="font-weight:bold; color:#f87171; margin-bottom:8px;">紊乱度 → 攻击力</div>
+          <div style="border:2px solid #f87171; border-radius:8px; padding:12px;">
+            <div style="font-size:12px; color:var(--muted);">词的荒诞搭配</div>
+            <div style="font-size:12px; color:var(--muted);">语义冲突程度</div>
+            <div style="font-size:12px; color:var(--muted);">创意突破常规</div>
+          </div>
+          <div style="margin-top:8px; font-size:13px;">"燃烧的 冰箱 飞翔"<br/>→ 紊乱度高 → ATK高</div>
+        </div>
+
+        <div style="display:flex; align-items:center; font-size:24px; font-weight:bold;">vs</div>
+
+        <div style="text-align:center; width:200px;">
+          <div style="font-weight:bold; color:#60a5fa; margin-bottom:8px;">合规度 → 防御力</div>
+          <div style="border:2px solid #60a5fa; border-radius:8px; padding:12px;">
+            <div style="font-size:12px; color:var(--muted);">语法结构完整性</div>
+            <div style="font-size:12px; color:var(--muted);">成分搭配合理性</div>
+            <div style="font-size:12px; color:var(--muted);">词性约束满足度</div>
+          </div>
+          <div style="margin-top:8px; font-size:13px;">"温暖的 阳光 照耀"<br/>→ 合规度高 → DEF高</div>
+        </div>
+      </div>
+
+      <div style="text-align:center; padding:16px; background:var(--bg-secondary); border-radius:8px; max-width:500px; margin:0 auto;">
+        <div style="font-weight:bold; margin-bottom:8px;">核心张力</div>
+        <div style="font-size:14px; line-height:1.8;">
+          每回合抉择：<br/>
+          追求 <b style="color:#f87171;">高紊乱</b>（荒诞组合→高攻）→ 合规度低 → <b style="color:#60a5fa;">脆皮</b><br/>
+          追求 <b style="color:#60a5fa;">高合规</b>（工整句子→高防）→ 紊乱度低 → <b style="color:#f87171;">刮痧</b>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; display: flex; justify-content: center; font-size:13px;">
+        <div class="pros-cons" style="max-width:600px;">
+          <div class="pros"><h4>优点</h4><ul>
+            <li>自然攻防博弈：伤害vs生存的内在张力</li>
+            <li>两个维度天然对立，平衡性易控制</li>
+            <li>每回合都是有趣的trade-off决策</li>
+          </ul></div>
+          <div class="cons"><h4>缺点</h4><ul>
+            <li>"合规度"对词嵌入模型依赖更大</li>
+            <li>两套评分并行，计算复杂度翻倍</li>
+            <li>需仔细调参防止某一侧过强</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section">
+  <h3>我的推荐：方案B作为骨架 + 方案A/C的精华</h3>
+  <div style="padding: 16px; background: rgba(74,222,128,0.08); border: 1px solid #4ade80; border-radius: 10px; max-width: 650px; margin: 0 auto;">
+    <div style="font-weight: bold; margin-bottom: 8px;">以连击系统为主框架，融合成分映射和攻防对冲：</div>
+    <ul style="font-size:14px; line-height:1.8;">
+      <li>攻击力 = <b>紊乱度评分 x 连击倍率</b>（方案B）</li>
+      <li>三组句子成分：<b>攻击组</b>（谓/宾/补）、<b>防御组</b>（主/定）、<b>修饰组</b>（状/定→暴击/特效）</li>
+      <li>各组牌数量比例 → 决定攻/防/暴分配比（方案A思路）</li>
+      <li>合规度作为防御加权系数（方案C思路）</li>
+      <li>修辞检测（排比/对仗）→ 额外倍率</li>
+      <li>违规惩罚 → 成分缺失扣总分X%</li>
+    </ul>
+    <div style="font-size:13px; color:var(--muted); margin-top:8px;">
+      这样既有"句子长度=连击"的策略深度，又有攻防治疗的战斗层次，每个维度都能用公式清晰表达。
+    </div>
+  </div>
+</div>
+</div>
