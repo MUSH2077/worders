@@ -1,6 +1,8 @@
 # Godot 4+ specific ignores
 .godot/
 
-# Exported builds (GitHub 100 MB file limit)
+# Exported builds (GitHub 100 MB file limit — use Releases instead)
 *.exe
+*.pck
 worders.exe
+worders.pck
